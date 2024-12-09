@@ -1,0 +1,9 @@
+1
+meat
+meat
+2
+fish
+fish
+3
+vegetable
+vegetable
