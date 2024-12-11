@@ -4,8 +4,7 @@ package hr.java.restaurant.model;
  * Represents a category within the restaurant, such as a meal type or item classification.
  * A category has a name and a description that provide details about what it encompasses.
  */
-public class Category {
-    private Integer id;
+public class Category{
     private String name;
     private String description;
 
@@ -13,12 +12,10 @@ public class Category {
      * Private constructor to create a Category object with the specified name and description.
      * This constructor is used by the Builder class to instantiate a Category.
      *
-     * @param id          The id of the category
      * @param name        The name of the category.
      * @param description A description of the category.
      */
-    private Category(Integer id, String name, String description) {
-        this.id = id;
+    private Category(String name, String description){
         this.name = name;
         this.description = description;
     }
@@ -28,20 +25,8 @@ public class Category {
      * The builder pattern is used to provide a flexible and readable way of creating Category objects.
      */
     public static class Builder {
-        private Integer id;
         private String name;
         private String description;
-
-        /**
-         * Sets the id of the category.
-         *
-         * @param id The id of the category.
-         * @return The builder instance, for method chaining.
-         */
-        public Builder id(Integer id) {
-            this.id = id;
-            return this;
-        }
 
         /**
          * Sets the name of the category.
@@ -71,17 +56,8 @@ public class Category {
          * @return A new {@link Category} object.
          */
         public Category build() {
-            return new Category(id, name, description);
+            return new Category(name, description);
         }
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
 

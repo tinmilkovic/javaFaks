@@ -43,4 +43,8 @@ public abstract class Person {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+
+    public String getFirstAndLastName() {
+        return getFirstName() + " " + getLastName();
+    }
 }
